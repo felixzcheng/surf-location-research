@@ -1,8 +1,26 @@
 # Surf Location Research
 
-A shareable Codex skill for researching surf destinations and date-specific conditions using forecasts, timestamped observations, guides, video evidence and satellite geography.
+A portable Markdown skill for researching surf destinations and date-specific conditions using forecasts, timestamped observations, guides, video evidence and satellite geography.
 
-## Download and install
+## Single-file skill: Claude Code and other agents
+
+Download [SKILL.md](https://raw.githubusercontent.com/felixzcheng/surf-location-research/main/SKILL.md). It includes the complete workflow and report template; no supporting files are required for this version.
+
+### Claude Code
+
+Save the file as `~/.claude/skills/surf-location-research/SKILL.md` for personal use, or `.claude/skills/surf-location-research/SKILL.md` inside a project. Invoke it with `/surf-location-research Da Nang tomorrow`.
+
+See the [official Claude Code skill documentation](https://code.claude.com/docs/en/skills). These installation instructions have been checked against the documentation; the workflow has not been end-to-end tested in Claude.
+
+### Other agents and chat interfaces
+
+If your agent supports SKILL.md skills, put the file in its documented skill directory. Otherwise, attach or paste the Markdown and say:
+
+> Follow the attached Surf Location Research workflow. Begin by asking for my own surfing profile and preferences, then research [destination] for [dates].
+
+The agent needs web research access for current conditions. Video and satellite inspection depend on its tools. Markdown instructions do not grant tools or permissions, and automatic skill discovery varies by product. Without web access, it must disclose that current conditions cannot be verified.
+
+## Original multi-file bundle: Codex
 
 1. Download [surf-location-research.zip](surf-location-research.zip).
 2. Unzip it and copy the entire `surf-location-research` folder into `$CODEX_HOME/skills` (or `~/.codex/skills` when unset).
